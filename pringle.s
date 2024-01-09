@@ -41,7 +41,7 @@ loop:
     CMP   W23, WZR
     B.EQ  terminator
     MOV   X24, 37   
-    CMP   X23, X24  // checks if percent
+    CMP   X23, X24  // checks if %
     B.EQ  alpha
     ADD   X27, X27, 1
     ADD   X28, X28, 1
@@ -53,7 +53,7 @@ alpha:
     LDRB  W23, [X20, X27]
     STRB  W23, [X29, X28]
     MOV   X24, 97   
-    CMP   X23, X24  // checks if alpha
+    CMP   X23, X24  // checks if a
     B.NE  L1
 L4: ADD   X22, X22, 1
     SUB   X25, X22, 1
@@ -66,9 +66,9 @@ L4: ADD   X22, X22, 1
     B     bandl
 
 L1: MOV   X24, 37   
-    CMP   X23, X24  // checks if percent
+    CMP   X23, X24  // checks if %
     B.EQ  alpha
-    CMP   W23, WZR  // checks if zero
+    CMP   W23, WZR  // checks if 0
     B.EQ  terminator
     ADD   X27, X27, 1
     ADD   X28, X28, 1
