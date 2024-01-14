@@ -2,7 +2,7 @@
 
 Pringle is a variadic function that can take in an infinite number of parameters. Done in ARM Assembly, pringle is a reimplementation of C's `printf()` function.
 
-To use the tester do:
+To use the tester do (in the respective directory) :
 
 ```
 qemu-aarch64 -L /usr/aarch64-linux-gnu tester -h
